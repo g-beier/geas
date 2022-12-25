@@ -1,18 +1,21 @@
 ---
 import { Icon } from 'astro-icon';
-import { getHomePermalink, getRelativeLink } from '~/utils/permalinks';
+import {
+	getHomePermalink,
+	// getRelativeLink
+} from '~/utils/permalinks';
 
 const links = [
 	{
-		title: 'Product',
+		title: 'Links úteis',
 		items: [
-			{ title: 'Features', href: '#' },
-			{ title: 'Security', href: '#' },
-			{ title: 'Team', href: '#' },
-			{ title: 'Enterprise', href: '#' },
-			{ title: 'Customer stories', href: '#' },
-			{ title: 'Pricing', href: '#' },
-			{ title: 'Resources', href: '#' },
+			{ title: 'Escoteiros do Brasil', href: '#' },
+			{ title: 'Escoteiros RS', href: '#' },
+			{ title: 'Paxtu', href: '#' },
+			{ title: 'Campo Escola Virtual', href: '#' },
+			// { title: 'Customer stories', href: '#' },
+			// { title: 'Pricing', href: '#' },
+			// { title: 'Resources', href: '#' },
 		],
 	},
 	{
@@ -50,11 +53,11 @@ const links = [
 ];
 
 const social = [
-	{ label: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
-	{ label: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-	{ label: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-	{ label: 'RSS', icon: 'tabler:rss', href: getRelativeLink('/rss.xml') },
-	{ label: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+	// { label: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
+	{ label: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/geas38rs/' },
+	{ label: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/Geas38rs' },
+	// { label: 'RSS', icon: 'tabler:rss', href: getRelativeLink('/rss.xml') },
+	// { label: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
 ];
 ---
 
@@ -63,7 +66,10 @@ const social = [
 		<div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
 			<div class="col-span-12 lg:col-span-4">
 				<div class="mb-2">
-					<a class="inline-block font-bold text-xl" href={getHomePermalink()}>AstroWind</a>
+					<a class="inline-flex flex-col font-bold text-xl" href={getHomePermalink()}>
+						<span class="text-base">Grupo Escoteiro</span>
+						Albert Schweitzer
+					</a>
 				</div>
 				<div class="text-sm text-gray-600">
 					<a
