@@ -13,7 +13,7 @@ const { post, url } = Astro.props;
 		<header class={post.image ? 'text-center' : ''}>
 			<p class="px-4 sm:px-6 max-w-3xl mx-auto">
 				<time datetime={post.publishDate}>{getFormattedDate(post.publishDate)}</time> ~ {Math.ceil(post.readingTime)} min
-				read
+				de leitura
 			</p>
 			<h1
 				class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-8 font-heading"

@@ -29,7 +29,7 @@ import { getHomePermalink, getBlogPermalink, getPermalink } from '~/utils/permal
 				<li class="dropdown">
 					<button
 						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-						>Pages</button
+						>Páginas</button
 					>
 					<ul
 						class="dropdown-menu rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white md:min-w-[200px] dark:md:bg-slate-800 drop-shadow-xl"
@@ -56,8 +56,8 @@ import { getHomePermalink, getBlogPermalink, getPermalink } from '~/utils/permal
 				<li>
 					<a
 						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-						href={getPermalink('useful-resources-to-create-websites', 'post')}
-						>Resources
+						href={getPermalink('historia-do-geas', 'post')}
+						>História
 					</a>
 				</li>
 				<li>
@@ -80,6 +80,13 @@ import { getHomePermalink, getBlogPermalink, getPermalink } from '~/utils/permal
 						>Facebook
 					</a>
 				</li>
+				<li class="md:hidden">
+					<a
+						class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href="https://twitter.com/geas38rs"
+						>Twitter
+					</a>
+				</li>
 			</ul>
 			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
 				<div class="hidden items-center md:flex">
@@ -97,6 +104,13 @@ import { getHomePermalink, getBlogPermalink, getPermalink } from '~/utils/permal
 						aria-label="Página do Facebook"
 					>
 						<Icon name="tabler:brand-facebook" class="w-5 h-5" />
+					</a>
+					<a
+						href="https://twitter.com/geas38rs"
+						class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+						aria-label="Perfil do Twitter"
+					>
+						<Icon name="tabler:brand-twitter" class="w-5 h-5" />
 					</a>
 				</div>
 			</div>
