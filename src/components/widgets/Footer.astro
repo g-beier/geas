@@ -9,53 +9,31 @@ const links = [
 	{
 		title: 'Links úteis',
 		items: [
-			{ title: 'Escoteiros do Brasil', href: '#' },
-			{ title: 'Escoteiros RS', href: '#' },
-			{ title: 'Paxtu', href: '#' },
-			{ title: 'Campo Escola Virtual', href: '#' },
+			{ title: 'Escoteiros do Brasil', href: 'https://www.escoteiros.org.br/' },
+			{ title: 'Escoteiros RS', href: 'https://escoteirosrs.org.br/' },
+			{ title: 'Paxtu', href: 'https://paxtu.escoteiros.org.br/' },
+			{ title: 'Campo Escola Virtual', href: 'https://ead.escoteiros.org.br/' },
 			// { title: 'Customer stories', href: '#' },
 			// { title: 'Pricing', href: '#' },
 			// { title: 'Resources', href: '#' },
 		],
 	},
 	{
-		title: 'Platform',
+		title: 'Comunidade Martin Luther',
 		items: [
-			{ title: 'Developer API', href: '#' },
-			{ title: 'Partners', href: '#' },
-			{ title: 'Atom', href: '#' },
-			{ title: 'Electron', href: '#' },
-			{ title: 'AstroWind Desktop', href: '#' },
-		],
-	},
-	{
-		title: 'Support',
-		items: [
-			{ title: 'Docs', href: '#' },
-			{ title: 'Community Forum', href: '#' },
-			{ title: 'Professional Services', href: '#' },
-			{ title: 'Skills', href: '#' },
-			{ title: 'Status', href: '#' },
-		],
-	},
-	{
-		title: 'Company',
-		items: [
-			{ title: 'About', href: '#' },
-			{ title: 'Blog', href: '#' },
-			{ title: 'Careers', href: '#' },
-			{ title: 'Press', href: '#' },
-			{ title: 'Inclusion', href: '#' },
-			{ title: 'Social Impact', href: '#' },
-			{ title: 'Shop', href: '#' },
+			{ title: 'Site da CML', href: 'http://www.mluther.org.br/' },
+			{ title: 'Facebook', href: 'https://www.facebook.com/mluther.org.br' },
+			{ title: 'Instagram', href: 'https://www.instagram.com/mluther.org.br/' },
+			// { title: 'Electron', href: '#' },
+			// { title: 'AstroWind Desktop', href: '#' },
 		],
 	},
 ];
 
 const social = [
-	// { label: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
 	{ label: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/geas38rs/' },
 	{ label: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/Geas38rs' },
+	{ label: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/geas38rs' },
 	// { label: 'RSS', icon: 'tabler:rss', href: getRelativeLink('/rss.xml') },
 	// { label: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
 ];
@@ -63,8 +41,8 @@ const social = [
 
 <footer class="border-t border-gray-200 dark:border-slate-800">
 	<div class="max-w-6xl mx-auto px-4 sm:px-6">
-		<div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
-			<div class="col-span-12 lg:col-span-4">
+		<div class="grid grid-cols-10 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
+			<div class="col-span-10 lg:col-span-6">
 				<div class="mb-2">
 					<a class="inline-flex flex-col font-bold text-xl" href={getHomePermalink()}>
 						<span class="text-base">Grupo Escoteiro</span>
@@ -74,17 +52,18 @@ const social = [
 				<div class="text-sm text-gray-600">
 					<a
 						class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-						href="#">Terms</a
-					> ·
+						href="#">Regulamento</a
+					>
+					·
 					<a
 						class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-						href="#">Privacy Policy</a
+						href="#">Calendário</a
 					>
 				</div>
 			</div>
 			{
 				links.map(({ title, items }) => (
-					<div class="col-span-6 md:col-span-3 lg:col-span-2">
+					<div class="col-span-10 sm:col-span-5 md:col-span-3 lg:col-span-2">
 						<div class="text-gray-800 dark:text-gray-300 font-medium mb-2">{title}</div>
 						{items && Array.isArray(items) && items.length > 0 && (
 							<ul class="text-sm">
@@ -122,12 +101,9 @@ const social = [
 			</ul>
 
 			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
-				<span
-					class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"
-				>
-				</span>
-				Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> ·
-				All rights reserved.
+				Modelo de site por <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/">
+					onWidget</a
+				> · Todos direitos reservados.
 			</div>
 		</div>
 	</div>
