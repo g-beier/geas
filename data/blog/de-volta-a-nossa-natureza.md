@@ -33,7 +33,7 @@ Dos jovens que participam dos grupos atualmente, grande parte recebeu instruçõ
 
 Companheiro de tropa de Nalu e João, Kelvyn (10) ingressou no ME junto de sua irmã, Kalytsa (17), e foram levados por sua mãe, Etiane, que é diretora administrativa do grupo. Etiane já foi chefe assistente nos ramos Sênior e Lobinho e também presidente do grupo escoteiro. Ela conta que, quando jovem, gostava muito dos acampamentos, atividades sociais e das conversas e trocas com os chefes. Ela vê no Movimento Escoteiro uma oportunidade para as crianças se desenvolverem em diversas áreas, além de ver em seus próprios filhos tais mudanças, relatando que a diferença foi nítida após a entrada no Movimento:
 
-> “eles ainda não percebem isso, mas eu, como adulta, sei que muito da evolução deles enquanto pessoa, cognitiva, comportamental e social, tem a ver com o ME e com aquilo que se trabalha por trás das cortinas. É muito gratificante vê-los se tornando jovens protagonistas dos seus desejos, mas conscientes de que também têm deveres além dos direitos.”
+> eles ainda não percebem isso, mas eu, como adulta, sei que muito da evolução deles enquanto pessoa, cognitiva, comportamental e social, tem a ver com o ME e com aquilo que se trabalha por trás das cortinas. É muito gratificante vê-los se tornando jovens protagonistas dos seus desejos, mas conscientes de que também têm deveres além dos direitos.
 
 Com o efetivo regional e do grupo sendo menor entre os 15 e 21 anos, Etiane ressalta que esta é a idade mais difícil de conseguir manter o jovem interessado em fazer parte do ME: _“essa fase tem interesses diferentes e, muitas vezes, a presença no grupo escoteiro pode impossibilitar o contato com os amigos que não fazem parte”_.
 
