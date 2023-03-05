@@ -5,12 +5,12 @@ const items = [
 	[
 		{
 			question: 'Onde fica o Grupo Escoteiro?',
-			answer: `Nosso Grupo fica na Rua Coronel Camisão, 30 no bairro Higienópolis (Zona Norte de Porto Alegre) junto ao Colégio Pastor Dohms.`,
+			answer: `Nosso Grupo fica na Rua Coronel Camisão, 30 no bairro Higienópolis (Zona Norte de Porto Alegre) junto ao Colégio Pastor Dohms. Realizamos nossas atividades na área do turno inverso.`,
 		},
 		{
 			question: 'Quais os dias e horários das reuniões?',
-			answer: `Nossas atividades acontecem, normalmente, nos sábados à tarde, iniciando às 13h30 e encerrando às 18h00.
-
+			answer: `Nossas atividades acontecem, normalmente, nos sábados à tarde, iniciando às 13h30 e encerrando às 18h00. 
+			
 			Eventualmente, temos atividades especiais, como acampamentos, excursões ou mutirões, e os horários podem variar. Além disso, antecipamos o encerramento nos meses de Julho e Agosto para 17h30.`,
 		},
 	],
@@ -18,34 +18,42 @@ const items = [
 		{
 			question: 'Qual a idade para participar?',
 			answer: `Crianças a partir de 6 anos e meio podem participar como lobinhos - e jovens até 21 anos podem permanecer participando nos demais ramos.
-	
+			
 			Os membros do grupo são divididos em quatro ramos, pelas faixas etárias: Ramo Lobinho, entre 6 anos e meio e 11 anos; Ramo Escoteiro, entre 10 e 15 anos; Ramo Sênior, entre 15 e 18 anos; e Ramo Pioneiro, entre 17 e 21 anos.`,
 		},
 	],
 ];
 ---
 
-<div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+<div class="mx-auto max-w-6xl px-4 py-16 lg:py-20">
 	<div class="max-w-xl sm:mx-auto lg:max-w-2xl">
-		<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-			<h2 class="max-w-lg mb-4 text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto font-heading">
+		<div class="mb-10 max-w-xl sm:text-center md:mx-auto md:mb-12 lg:max-w-2xl">
+			<h2
+				class="font-heading mb-4 max-w-lg text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto"
+			>
 				Perguntas Frequentes
 			</h2>
 		</div>
 	</div>
 	<div class="max-w-screen-xl sm:mx-auto">
-		<div class="grid grid-cols-1 gap-x-8 gap-y-8 lg:gap-x-16 md:grid-cols-2">
+		<div class="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 lg:gap-x-16">
 			{
 				items.map((subitems) => (
 					<div class="space-y-8">
 						{subitems.map(({ question, answer }) => (
 							<div>
 								<p class="mb-4 text-xl font-bold">
-									<Icon name="tabler:arrow-down-right" class="w-7 h-7 text-primary-500 inline-block" />
+									<Icon
+										name="tabler:arrow-down-right"
+										class="text-primary-500 inline-block h-7 w-7"
+									/>
 									{question}
 								</p>
 								{answer.split(/\n *\n/).map((paragraph) => (
-									<p class="text-gray-700 dark:text-gray-400 mb-2" set:html={paragraph} />
+									<p
+										class="mb-2 text-gray-700 dark:text-gray-400"
+										set:html={paragraph}
+									/>
 								))}
 							</div>
 						))}

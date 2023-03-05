@@ -3,68 +3,100 @@ import { Icon } from 'astro-icon';
 import { Picture } from '@astrojs/image/components';
 ---
 
-<section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
-	<div class="grid gap-6 row-gap-10 md:grid-cols-2">
+<section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+	<div class="row-gap-10 grid gap-6 md:grid-cols-2">
 		<div class="md:pb-6 md:pr-16">
-			<h2 class="mb-8 text-3xl lg:text-4xl font-bold font-heading">Venha ser escoteiro conosco:</h2>
+			<h2 class="font-heading mb-8 text-3xl font-bold lg:text-4xl">
+				Venha ser escoteiro conosco:
+			</h2>
 			<div class="flex">
-				<div class="flex flex-col items-center mr-4">
-					<div>
-						<div class="flex items-center justify-center w-10 h-10 rounded-full border-primary-600 border-2">
-							<Icon name="tabler:arrow-down" class="w-6 h-6 text-primary-600 dark:text-slate-200" />
-						</div>
-					</div>
-					<div class="w-px h-full bg-gray-300 dark:bg-slate-500"></div>
-				</div>
-				<div class="pt-1 pb-8">
-					<p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">Passo 1</p>
-					<p class="text-gray-600 dark:text-slate-400">
-						Visite o Grupo Escoteiro em uma atividade de sábado e faça seu registro provisório.
-					</p>
-				</div>
-			</div>
-			<div class="flex">
-				<div class="flex flex-col items-center mr-4">
-					<div>
-						<div class="flex items-center justify-center w-10 h-10 rounded-full border-primary-600 border-2">
-							<Icon name="tabler:arrow-down" class="w-6 h-6 text-primary-600 dark:text-slate-200" />
-						</div>
-					</div>
-					<div class="w-px h-full bg-gray-300 dark:bg-slate-500"></div>
-				</div>
-				<div class="pt-1 pb-8">
-					<p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">Passo 2</p>
-					<p class="text-gray-600 dark:text-slate-400">
-						Conheça as atividades escoteiras e participe por um mês de todas as nossas atividades.
-					</p>
-				</div>
-			</div>
-			<div class="flex">
-				<div class="flex flex-col items-center mr-4">
-					<div>
-						<div class="flex items-center justify-center w-10 h-10 rounded-full border-primary-600 border-2">
-							<Icon name="tabler:arrow-down" class="w-6 h-6 text-primary-600 dark:text-slate-200" />
-						</div>
-					</div>
-					<div class="w-px h-full bg-gray-300 dark:bg-slate-500"></div>
-				</div>
-				<div class="pt-1 pb-8">
-					<p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">Passo 3</p>
-					<p class="text-gray-600 dark:text-slate-400">Realize seu registro definitivo, com duração de 12 meses.</p>
-				</div>
-			</div>
-			<div class="flex">
-				<div class="flex flex-col items-center mr-4">
+				<div class="mr-4 flex flex-col items-center">
 					<div>
 						<div
-							class="flex items-center justify-center w-10 h-10 rounded-full border-primary-600 border-2 bg-primary-600"
+							class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-600"
 						>
-							<Icon name="tabler:check" class="w-6 h-6 text-white dark:text-slate-200" />
+							<Icon
+								name="tabler:arrow-down"
+								class="w-6 h-6 text-primary-600 dark:text-slate-200"
+							/>
+						</div>
+					</div>
+					<div class="h-full w-px bg-gray-300 dark:bg-slate-500"></div>
+				</div>
+				<div class="pt-1 pb-8">
+					<p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">
+						Passo 1
+					</p>
+					<p class="text-gray-600 dark:text-slate-400">
+						Visite o Grupo Escoteiro em uma atividade de sábado e faça seu
+						registro provisório.
+					</p>
+				</div>
+			</div>
+			<div class="flex">
+				<div class="mr-4 flex flex-col items-center">
+					<div>
+						<div
+							class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-600"
+						>
+							<Icon
+								name="tabler:arrow-down"
+								class="w-6 h-6 text-primary-600 dark:text-slate-200"
+							/>
+						</div>
+					</div>
+					<div class="h-full w-px bg-gray-300 dark:bg-slate-500"></div>
+				</div>
+				<div class="pt-1 pb-8">
+					<p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">
+						Passo 2
+					</p>
+					<p class="text-gray-600 dark:text-slate-400">
+						Conheça as atividades escoteiras e participe por um mês de todas as
+						nossas atividades.
+					</p>
+				</div>
+			</div>
+			<div class="flex">
+				<div class="mr-4 flex flex-col items-center">
+					<div>
+						<div
+							class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-600"
+						>
+							<Icon
+								name="tabler:arrow-down"
+								class="w-6 h-6 text-primary-600 dark:text-slate-200"
+							/>
+						</div>
+					</div>
+					<div class="h-full w-px bg-gray-300 dark:bg-slate-500"></div>
+				</div>
+				<div class="pt-1 pb-8">
+					<p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">
+						Passo 3
+					</p>
+					<p class="text-gray-600 dark:text-slate-400">
+						Realize seu registro definitivo, com duração de 12 meses.
+					</p>
+				</div>
+			</div>
+			<div class="flex">
+				<div class="mr-4 flex flex-col items-center">
+					<div>
+						<div
+							class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-600 bg-primary-600"
+						>
+							<Icon
+								name="tabler:check"
+								class="w-6 h-6 text-white dark:text-slate-200"
+							/>
 						</div>
 					</div>
 				</div>
 				<div class="pt-1">
-					<p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">Pronto!</p>
+					<p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">
+						Pronto!
+					</p>
 					<p class="text-gray-600 dark:text-slate-400"></p>
 				</div>
 			</div>
@@ -72,10 +104,10 @@ import { Picture } from '@astrojs/image/components';
 		<div class="relative">
 			<Picture
 				class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
-				src={import('~/assets/images/astronaut.jpg')}
+				src={import('~/assets/images/foto-epud-003.jpg')}
 				widths={[400, 768]}
 				sizes="(max-width: 768px) 100vw, 432px"
-				alt="Astronaut"
+				alt="Escoteira alegre com o rosto pintado"
 				aspectRatio="432:768"
 			/>
 		</div>

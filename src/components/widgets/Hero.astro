@@ -4,33 +4,33 @@ import { Picture } from '@astrojs/image/components';
 ---
 
 <section>
-	<div class="max-w-6xl mx-auto px-4 sm:px-6">
+	<div class="mx-auto max-w-6xl px-4 sm:px-6">
 		<div class="py-12 md:py-20">
-			<div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
-				<h2 class="text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4 font-heading">
-					Your website with
-					<span>Astro</span> +
-					<span class="sm:whitespace-nowrap">Tailwind CSS</span>
+			<div class="mx-auto max-w-5xl pb-10 text-center md:pb-16">
+				<h2
+					class="leading-tighter font-heading mb-4 text-5xl font-bold tracking-tighter md:text-[3.50rem]"
+				>
+					O Grupo Escoteiro ideal para você!
 				</h2>
-				<div class="max-w-3xl mx-auto">
-					<p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
-						<span class="font-semibold underline decoration-wavy decoration-1 decoration-primary-600 underline-offset-2"
-							>AstroWind</span
-						> is a production ready template to start your new website using <em>Astro</em> + <em>Tailwind CSS</em>. It
-						has been designed following Best Practices, SEO, Accessibility, <span class="inline sm:hidden">...</span
-						><span class="hidden sm:inline"
-							>Dark Mode, Great Page Speed, image optimization, sitemap generation and more.</span
-						>
+				<div class="mx-auto max-w-3xl">
+					<p class="mb-8 text-xl text-gray-600 dark:text-slate-400">
+						O Grupo&nbsp;Escoteiro Albert&nbsp;Schweitzer tem mais de
+						50&nbsp;anos&nbsp;de&nbsp;história, proporcionando aventuras e
+						aprendizagem para crianças,&nbsp;adolescentes&nbsp;e&nbsp;jovens
+						entre&nbsp;6&nbsp;e&nbsp;21&nbsp;anos,&nbsp;desde 1968.
 					</p>
-					<div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+					<div
+						class="m-auto flex max-w-xs flex-col flex-nowrap gap-4 sm:max-w-md sm:flex-row sm:justify-center"
+					>
 						<div class="flex w-full sm:w-auto">
 							<a
-								class="btn btn-primary sm:mb-0 w-full"
+								class="btn btn-primary w-full sm:mb-0"
 								href="https://goo.gl/maps/317AMCrEq1Lso7By6"
 								target="_blank"
 								rel="noreferrer noopner"
 							>
-								<Icon name="tabler:map-pin" class="w-5 h-5 mr-1 -ml-1.5" /> Encontre o Albert
+								<Icon name="tabler:map-pin" class="w-5 h-5 mr-1 -ml-1.5" /> Encontre
+								o Albert
 							</a>
 						</div>
 						<div class="flex w-full sm:w-auto">
@@ -42,11 +42,11 @@ import { Picture } from '@astrojs/image/components';
 			<div>
 				<div class="relative m-auto max-w-4xl">
 					<Picture
-						src={import('~/assets/images/hero.jpg')}
+						src={import('~/assets/images/foto-epud-002.jpg')}
 						class="mx-auto rounded-md w-full"
 						widths={[400, 768, 1480]}
 						sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
-						alt="Hero Image"
+						alt="Escoteiro sorrindo e fazendo uma saudação"
 						aspectRatio={1480 / 833}
 						loading="eager"
 						width={1480}
