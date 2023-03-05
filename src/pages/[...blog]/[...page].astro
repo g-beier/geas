@@ -23,7 +23,9 @@ const { page } = Astro.props;
 const currentPage = page.currentPage ?? 1;
 
 const meta = {
-	title: `Blog ${currentPage > 1 ? `— Page ${currentPage} ` : ''}— ${SITE.name}`,
+	title: `Blog ${currentPage > 1 ? `— Página ${currentPage} ` : ''}— ${
+		SITE.name
+	}`,
 	description: SITE.description,
 	canonical: getCanonical(getPermalink(BLOG?.blog?.pathname)),
 	ogType: 'blog',
@@ -32,7 +34,7 @@ const meta = {
 ---
 
 <Layout {meta}>
-	<Fragment slot="title">Notícias e artigos sobre nossas atividades</Fragment>
+	<Fragment slot="title">Blog</Fragment>
 	<BlogList posts={page.data} />
 	<Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
 </Layout>

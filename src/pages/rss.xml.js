@@ -1,29 +1,21 @@
 import rss from '@astrojs/rss';
+import { getCollection } from 'astro:content';
 
-import { SITE, BLOG } from '~/config.mjs';
-import { fetchPosts } from '~/utils/posts';
-import { getPermalink } from '~/utils/permalinks';
+import { SITE } from '~/config.mjs';
 
-export const get = async () => {
-	if (BLOG.disabled) {
-		return new Response(null, {
-			status: 404,
-			statusText: 'Not found',
-		});
-	}
-
-	const posts = await fetchPosts();
-
+export async function get() {
+	const blog = await getCollection('blog');
 	return rss({
-		title: `${SITE.name}’s Blog`,
+		title: `Blog do ${SITE.name}`,
 		description: SITE.description,
 		site: import.meta.env.SITE,
-
-		items: posts.map((post) => ({
-			link: getPermalink(post.slug, 'post'),
-			title: post.title,
-			description: post.description,
-			publishDate: post.publishDate,
+		items: blog.map((post) => ({
+			title: post.data.title,
+			pubDate: post.data.publishDate,
+			description: post.data.description,
+			// Compute RSS link from post `slug`
+			// This example assumes all posts are rendered as `/blog/[slug]` routes
+			link: `/${post.slug}`,
 		})),
 	});
-};
+}

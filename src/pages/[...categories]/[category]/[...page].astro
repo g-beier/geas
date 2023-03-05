@@ -6,7 +6,12 @@ import BlogList from '~/components/blog/List.astro';
 import Pagination from '~/components/atoms/Pagination.astro';
 
 import { fetchPosts } from '~/utils/posts';
-import { getCanonical, getPermalink, cleanSlug, CATEGORY_BASE } from '~/utils/permalinks';
+import {
+	getCanonical,
+	getPermalink,
+	cleanSlug,
+	CATEGORY_BASE,
+} from '~/utils/permalinks';
 
 export async function getStaticPaths({ paginate }) {
 	if (BLOG?.disabled || BLOG?.category?.disabled) return [];
@@ -15,14 +20,22 @@ export async function getStaticPaths({ paginate }) {
 
 	const categories = new Set();
 	posts.map((post) => {
-		typeof post.category === 'string' && categories.add(post.category.toLowerCase());
+		typeof post.category === 'string' &&
+			categories.add(post.category.toLowerCase());
 	});
 
 	return Array.from(categories).map((category) =>
 		paginate(
-			posts.filter((post) => typeof post.category === 'string' && category === post.category.toLowerCase()),
+			posts.filter(
+				(post) =>
+					typeof post.category === 'string' &&
+					category === post.category.toLowerCase()
+			),
 			{
-				params: { category: cleanSlug(category), categories: CATEGORY_BASE || undefined },
+				params: {
+					category: cleanSlug(category),
+					categories: CATEGORY_BASE || undefined,
+				},
 				pageSize: BLOG.postsPerPage,
 				props: { category },
 			}
@@ -35,7 +48,9 @@ const { page, category } = Astro.props;
 const currentPage = page.currentPage ?? 1;
 
 const meta = {
-	title: `Category '${category}' ${currentPage > 1 ? `— Page ${currentPage} ` : ''}— ${SITE.name}`,
+	title: `Categoria: '${category}' ${
+		currentPage > 1 ? `— Página ${currentPage} ` : ''
+	}— ${SITE.name}`,
 	description: SITE.description,
 	canonical: getCanonical(getPermalink(category, 'category')),
 	noindex: true,
@@ -44,7 +59,7 @@ const meta = {
 
 <Layout meta={meta}>
 	<Fragment slot="title">
-		Category: {category}
+		Categoria: {category}
 	</Fragment>
 	<BlogList posts={page.data} />
 	<Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
