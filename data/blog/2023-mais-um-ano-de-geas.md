@@ -2,7 +2,7 @@
 publishDate: 'Feb 02 2023'
 title: '2023: Mais um ano de GEAS'
 description: 'Com o Ano Novo, damos a largada a mais um ano de atividades do GEAS: diversos eventos, acampamentos e projetos para o ano de 2023.'
-# image: ''
+image: '~/assets/images/foto-epud-001.jpg'
 excerpt: 'Algumas das atividades previstas pelo GEAS para o ano de 2023.'
 category: 'Notícia'
 tags: [escotismo, voluntariado, indaba, planejamento]
