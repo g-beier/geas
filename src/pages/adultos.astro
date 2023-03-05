@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon';
 import Layout from '~/layouts/PageLayout.astro';
 const { meta } = Astro.props;
 const adultos = [
@@ -75,7 +76,12 @@ const adultos = [
 					<ul class="grid grid-cols-4 gap-8">
 						{voluntarios.map(({ name, role }) => (
 							<li class="flex-nowsrap col-span-2 flex flex-col md:col-span-1">
-								<span class="mb-4 block aspect-[4/5] w-full rounded-md bg-slate-400 shadow-lg" />
+								<span class="mb-4 block w-full rounded-md bg-slate-400 shadow-lg">
+									<Icon
+										name="tabler:user"
+										class="mx-auto my-5 aspect-square w-full"
+									/>
+								</span>
 								<span class="font-semibold">{name}</span>
 								<span class="text-sm">{role}</span>
 							</li>
