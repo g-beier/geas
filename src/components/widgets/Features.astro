@@ -5,12 +5,14 @@ const items = [
 	[
 		{
 			title: 'Galeto do GEAS',
-			description: 'No domingo 16 de Abril realizaremos o galeto pegue-e-leve, na sede do Grupo.',
+			description:
+				'No domingo 16 de Abril realizaremos o galeto pegue-e-leve, na sede do Grupo.',
 			icon: 'tabler:flame',
 		},
 		{
 			title: 'Bufê de Sopas',
-			description: 'Dia 01 de Julho teremos a décima segunda edição do nosso clássico Bufê de Sopas!',
+			description:
+				'Dia 01 de Julho teremos a décima segunda edição do nosso clássico Bufê de Sopas!',
 			icon: 'tabler:soup',
 		},
 		{
@@ -22,14 +24,9 @@ const items = [
 	],
 	[
 		{
-			title: 'Escoteiro por um dia',
-			description:
-				'Em Março, abriremos as portas para receber crianças e adolescentes para conhecer o Escotismo em uma atividade especial no Colégio Pastor Dohms.',
-			icon: 'tabler:rocket',
-		},
-		{
 			title: 'Fórum de Lei e Promessa',
-			description: 'Uma atividade de reflexão para adultos voluntários, no dia 27 de Maio.',
+			description:
+				'Uma atividade de reflexão para adultos voluntários, no dia 27 de Maio.',
 			icon: 'tabler:license',
 		},
 		{
@@ -43,25 +40,35 @@ const items = [
 ---
 
 <section class="scroll-mt-16" id="eventos">
-	<div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
-		<div class="mb-10 md:mx-auto sm:text-center md:mb-12 max-w-3xl">
-			<p class="text-base text-primary-600 dark:text-primary-200 font-semibold tracking-wide uppercase">Eventos</p>
-			<h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
+	<div class="mx-auto max-w-6xl px-4 py-16 lg:px-8 lg:py-20">
+		<div class="mb-10 max-w-3xl sm:text-center md:mx-auto md:mb-12">
+			<p
+				class="text-base font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-200"
+			>
+				Eventos
+			</p>
+			<h2
+				class="leading-tighter font-heading mb-4 text-4xl font-bold tracking-tighter md:text-5xl"
+			>
 				Esteja conosco este ano
 			</h2>
-			<p class="max-w-3xl mx-auto sm:text-center text-xl text-gray-600 dark:text-slate-400">
+			<p
+				class="mx-auto max-w-3xl text-xl text-gray-600 dark:text-slate-400 sm:text-center"
+			>
 				Veja quais são os eventos do GEAS este ano e como pode participar deles:
 			</p>
 		</div>
-		<div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0">
+		<div class="mx-auto grid space-y-6 md:grid-cols-2 md:space-y-0">
 			{
 				items.map((subitems) => (
 					<div class="space-y-8 sm:px-8">
 						{subitems.map(({ title, description, icon }) => (
-							<div class="flex flex-row max-w-md">
+							<div class="flex max-w-md flex-row">
 								<div class="mb-4 mr-4">
-									<div class="flex items-center justify-center w-12 h-12 rounded-full motion-safe:hover:scale-110 motion-safe:transition-transform motion-safe:duration-150 bg-primary-500 dark:bg-primary-700">
-										{icon && <Icon name={icon} class="w-6 h-6 text-white icon-light" />}
+									<div class="bg-primary-500 dark:bg-primary-700 flex h-12 w-12 items-center justify-center rounded-full motion-safe:transition-transform motion-safe:duration-150 motion-safe:hover:scale-110">
+										{icon && (
+											<Icon name={icon} class="icon-light h-6 w-6 text-white" />
+										)}
 									</div>
 								</div>
 								<div>
