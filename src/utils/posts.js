@@ -27,9 +27,12 @@ const getNormalizedPost = async (post) => {
 };
 
 const load = async function () {
-	const posts = import.meta.glob(['~/../data/blog/**/*.md', '~/../data/blog/**/*.mdx'], {
-		eager: true,
-	});
+	const posts = import.meta.glob(
+		['~/../data/blog/**/*.md', '~/../data/blog/**/*.mdx'],
+		{
+			eager: true,
+		}
+	);
 
 	const normalizedPosts = Object.keys(posts).map(async (key) => {
 		const post = await posts[key];
@@ -37,7 +40,10 @@ const load = async function () {
 	});
 
 	const results = (await Promise.all(normalizedPosts))
-		.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf())
+		.sort(
+			(a, b) =>
+				new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
+		)
 		.filter((post) => !post.draft);
 	return results;
 };
@@ -70,5 +76,5 @@ export const findLatestPosts = async ({ count }) => {
 	const _count = count || 4;
 	const posts = await fetchPosts();
 
-	return posts ? posts.slice(_count * -1) : [];
+	return posts ? posts.slice(0, _count) : [];
 };
