@@ -1,5 +1,5 @@
 export const SITE = {
-	name: 'Albert',
+	name: 'Albert Schweitzer',
 
 	origin: 'https://astrowind.vercel.app',
 	basePathname: '/',
