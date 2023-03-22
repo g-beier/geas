@@ -1,9 +1,9 @@
 ---
 publishDate: 'Mar 20 2023'
 title: 'Escoteiro por um Dia'
-description: 'O Escoteiro por um dia é uma atividade especial para jovens que querem visitar o Movimento Escoteiro. Saiba mais sobre o nosso evento!'
+description: 'O Escoteiro por um dia é uma atividade especial para jovens que querem visitar o Movimento Escoteiro. Saiba mais sobre o evento!'
 image: '~/assets/images/foto-epud-2023-001.jpg'
-excerpt: 'Saiba mais sobre esta atividade especial cheia de convidados.'
+excerpt: 'Saiba mais sobre esta atividade especial cheia de convidados que ocorreu dia 18 de março.'
 category: 'Notícia'
 tags: [escotismo, evento, CML]
 # canonical:
