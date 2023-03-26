@@ -1,0 +1,23 @@
+---
+import { Icon } from 'astro-icon';
+import Layout from '~/layouts/PageLayout.astro';
+const { meta } = Astro.props;
+---
+
+<Layout meta={meta}>
+	<section class="mx-auto max-w-3xl px-6 py-12 sm:px-6 sm:py-16 lg:py-20">
+		<Icon
+			name="tabler:send"
+			class="mx-auto my-5 aspect-square w-24 text-gray-700 dark:text-slate-400"
+		/>
+		<h1
+			class="leading-tighter font-heading mb-8 text-center text-3xl font-bold tracking-tighter md:mb-12 md:text-4xl"
+		>
+			Mensagem enviada!
+		</h1>
+		<p class="text-center">
+			Agradecemos seu contato. Em breve entraremos em contato com você!<br />
+			Aproveite para saber mais sobre o Grupo Escoteiro em nosso blog.
+		</p>
+	</section>
+</Layout>

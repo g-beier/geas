@@ -23,19 +23,29 @@ import { Icon } from 'astro-icon';
 		</div>
 
 		<form
-			action="https://formspree.io/f/xoqznwel"
+			action="https://api.staticforms.xyz/submit"
+			id="staticform"
 			method="post"
 			class="text-gray-700 dark:text-slate-400 lg:w-3/4"
 		>
+			<input
+				type="hidden"
+				name="accessKey"
+				value="8fced496-9861-4d66-a5ed-0d416573fdb1"
+			/>
+			<input type="hidden" name="subject" value="Contato: Albert Schweitzer" />
+			<input type="hidden" name="redirectTo" value="/contato" />
+			<input type="text" name="honeypot" style="display: none;" />
 			<ol class="grid grid-cols-1 gap-y-4 gap-x-8 md:grid-cols-2 lg:gap-x-16">
 				<li>
 					<label class="flex flex-col flex-nowrap">
 						<span class="ml-1 text-sm">Nome</span>
 						<input
 							type="text"
-							name="Nome"
+							name="name"
 							required
-							class="rounded-md border-2 border-gray-700/30 bg-white p-1 ring-offset-transparent focus:outline-none focus:ring-2 focus:ring-slate-700/50 focus:ring-offset-1 dark:border-slate-700/30 dark:bg-slate-700/40 dark:focus:ring-slate-700/50"
+							class="rounded-md border border-gray-700/30 bg-white p-1 ring-offset-transparent placeholder:text-gray-600/60 focus:outline-none focus:ring-2 focus:ring-slate-700/50 focus:ring-offset-1 dark:border-slate-700/30 dark:bg-slate-700/40 dark:placeholder:text-slate-500/70 dark:focus:ring-slate-700/50"
+							placeholder="Seu nome"
 						/>
 					</label>
 				</li>
@@ -44,8 +54,9 @@ import { Icon } from 'astro-icon';
 						<span class="ml-1 text-sm">Telefone</span>
 						<input
 							type="tel"
-							name="Telefone"
-							class="rounded-md border-2 border-gray-700/30 bg-white p-1 ring-offset-transparent focus:outline-none focus:ring-2 focus:ring-slate-700/50 focus:ring-offset-1 dark:border-slate-700/30 dark:bg-slate-700/40 dark:focus:ring-slate-700/50"
+							name="phone"
+							class="rounded-md border border-gray-700/30 bg-white p-1 ring-offset-transparent placeholder:text-gray-600/60 focus:outline-none focus:ring-2 focus:ring-slate-700/50 focus:ring-offset-1 dark:border-slate-700/30 dark:bg-slate-700/40 dark:placeholder:text-slate-500/70 dark:focus:ring-slate-700/50"
+							placeholder="Seu telefone ou WhatsApp"
 						/>
 					</label>
 				</li>
@@ -54,37 +65,59 @@ import { Icon } from 'astro-icon';
 						<span class="ml-1 text-sm">E-mail</span>
 						<input
 							type="email"
-							name="E-mail"
-							class="rounded-md border-2 border-gray-700/30 bg-white p-1 ring-offset-transparent focus:outline-none focus:ring-2 focus:ring-slate-700/50 focus:ring-offset-1 dark:border-slate-700/30 dark:bg-slate-700/40 dark:focus:ring-slate-700/50"
+							name="email"
+							class="rounded-md border border-gray-700/30 bg-white p-1 ring-offset-transparent placeholder:text-gray-600/60 focus:outline-none focus:ring-2 focus:ring-slate-700/50 focus:ring-offset-1 dark:border-slate-700/30 dark:bg-slate-700/40 dark:placeholder:text-slate-500/70 dark:focus:ring-slate-700/50"
+							placeholder="seu-email@contato.com"
 						/>
 					</label>
 				</li>
 				<li>
-					<label class="flex flex-col flex-nowrap">
-						<span class="ml-1 text-sm">Preferência de contato</span>
-						<select
-							required
-							name="Preferência"
-							class="rounded-md border-2 border-gray-700/30 bg-white p-1 ring-offset-transparent focus:outline-none focus:ring-2 focus:ring-slate-700/50 focus:ring-offset-1 dark:border-slate-700/30 dark:bg-slate-700/40 dark:focus:ring-slate-700/50"
-						>
-							<option value="email">E-mail</option>
-							<option value="telefone">Telefone</option>
-							<option value="whatsapp">WhatsApp</option>
-						</select>
-					</label>
+					<fieldset class="flex flex-col flex-nowrap gap-1 pl-1 text-sm">
+						<legend class="mb-2">Preferência de contato</legend>
+						<div>
+							<input
+								type="radio"
+								name="$contact_preference"
+								required
+								value="E-mail"
+								id="cp-email"
+							/>
+							<label for="cp-email">E-mail</label>
+						</div>
+						<div>
+							<input
+								type="radio"
+								name="$contact_preference"
+								required
+								value="Telefone"
+								id="cp-telefone"
+							/>
+							<label for="cp-telefone">Telefone</label>
+						</div>
+						<div>
+							<input
+								type="radio"
+								name="$contact_preference"
+								required
+								value="WhatsApp"
+								id="cp-whatsapp"
+							/>
+							<label for="cp-whatsapp">WhastApp</label>
+						</div>
+					</fieldset>
 				</li>
 				<li class="md:col-span-2">
 					<label class="flex flex-col flex-nowrap">
 						<span class="ml-1 text-sm">Mensagem</span>
 						<textarea
-							name="Mensagem"
-							class="h-32 resize-y rounded-md border-2 border-gray-700/30 bg-white p-1 ring-offset-transparent focus:outline-none focus:ring-2 focus:ring-slate-700/50 focus:ring-offset-1 dark:border-slate-700/30 dark:bg-slate-700/40 dark:focus:ring-slate-700/50"
+							name="message"
+							class="h-32 resize-none rounded-md border border-gray-700/30 bg-white p-1 ring-offset-transparent placeholder:text-gray-600/60 focus:outline-none focus:ring-2 focus:ring-slate-700/50 focus:ring-offset-1 dark:border-slate-700/30 dark:bg-slate-700/40 dark:placeholder:text-slate-500/70 dark:focus:ring-slate-700/50"
 						></textarea>
 					</label>
 				</li>
 			</ol>
 			<div class="mt-6">
-				<button class="btn btn-primary mb-4 sm:mb-0">
+				<button type="submit" class="btn btn-primary mb-4 sm:mb-0">
 					<Icon name="tabler:send" class="w-5 h-5 mr-2 -ml-1.5" />
 					Enviar mensagem</button
 				>
