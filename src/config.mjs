@@ -1,13 +1,13 @@
 export const SITE = {
 	name: 'Albert Schweitzer',
 
-	origin: 'https://astrowind.vercel.app',
+	origin: 'https://geas-test.netlify.app',
 	basePathname: '/',
 	trailingSlash: false,
 
 	title: 'Albert Schweitzer',
 	description:
-		'AstroWind is a free and ready to start template to make your website using Astro and Tailwind CSS.',
+		'Website do Grupo Escoteiro Albert Schweitzer, de Porto Alegre/RS.',
 
 	googleAnalyticsId: false, // or "G-XXXXXXXXXX",
 	googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
