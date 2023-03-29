@@ -7,15 +7,20 @@ const count = 4;
 const posts = await findLatestPosts({ count });
 ---
 
-<section class="px-4 py-16 mx-auto max-w-6xl lg:py-20" id="posts">
-	<div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
-		<h2 class="max-w-lg mb-2 text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none lg:mb-5 group font-heading">
-			<span class="inline-block mb-1 sm:mb-4">Últimas notícias<br class="hidden md:block" /> em nosso Blog</span>
+<section class="mx-auto max-w-6xl px-4 py-16 lg:py-20" id="posts">
+	<div class="mb-6 flex flex-col md:mb-8 lg:flex-row lg:justify-between">
+		<h2
+			class="font-heading group mb-2 max-w-lg text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none lg:mb-5"
+		>
+			<span class="mb-1 inline-block sm:mb-4"
+				>Últimas notícias<br class="hidden md:block" /> em nosso Blog</span
+			>
 		</h2>
 
-		<p class="text-gray-700 dark:text-slate-400 lg:text-sm lg:max-w-md">
-			Postamos no blog sobre os eventos e atividades do Grupo. As fotos estarão nas redes sociais, mas aqui você pode
-			acompanhar um pouco do que fazemos no Albert.
+		<p class="text-gray-700 dark:text-slate-400 lg:max-w-md lg:text-sm">
+			Postamos no blog sobre os eventos e atividades do Grupo. As fotos estarão
+			nas redes sociais, mas aqui você pode acompanhar um pouco do que fazemos
+			no Albert.
 		</p>
 	</div>
 
