@@ -5,7 +5,7 @@ description: 'Texto resgatado do antigo site do GEAS, relatando parte da histór
 # excerpt: Descriçao que aparece na lista, opcional
 image: '~/assets/images/historia-geas.webp'
 category: 'Artigo'
-tags: [história, CML]
+tags: [história, cml]
 # canonical: # When posting content to multiple platforms at the same time (such as this website and Medium) and want to specify the ultimate authority. Remove it to automatically generate canonical
 ---
 

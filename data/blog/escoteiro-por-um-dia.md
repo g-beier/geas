@@ -5,7 +5,7 @@ description: 'O Escoteiro por um dia é uma atividade especial para jovens que q
 image: '~/assets/images/foto-epud-2023-001.jpg'
 excerpt: 'Saiba mais sobre esta atividade especial cheia de convidados que ocorreu dia 18 de março.'
 category: 'Notícia'
-tags: [escotismo, evento, CML]
+tags: [escotismo, evento, cml]
 # canonical:
 ---
 

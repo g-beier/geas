@@ -2,9 +2,6 @@
 dist/
 .output/
 
-#future blog posts
-data/blog/future
-
 # dependencies
 node_modules/
 
