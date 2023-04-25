@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import VolunteerCard from '~/components/widgets/VolunteerCard.astro';
 import Layout from '~/layouts/PageLayout.astro';
 const { meta } = Astro.props;
 const adultos = [
@@ -9,11 +9,27 @@ const adultos = [
 			{ name: 'Antonio', role: 'Diretor Presidente' },
 			{ name: 'Etiane', role: 'Diretora Administrativa' },
 			// { name: 'Cristina', role: 'Diretora Administrativa Adjunta' },
-			{ name: 'Marineris', role: 'Diretora Financeira' },
+			{
+				name: 'Marineris',
+				role: 'Diretora Financeira',
+				imgURL: '~/assets/images/adultos/marineris.jpg',
+			},
 			{ name: 'Aline', role: 'Diretora Financeira Adjunta' },
-			{ name: 'Gilberto', role: 'Diretor de Métodos Educativos' },
-			{ name: 'Gustav', role: 'Diretor de Métodos Educativos Adjunto' },
-			{ name: 'Dorival', role: 'Diretor de Relções Institucionais' },
+			{
+				name: 'Gilberto',
+				role: 'Diretor de Métodos Educativos',
+				imgURL: '~/assets/images/adultos/gilberto.jpg',
+			},
+			{
+				name: 'Gustav',
+				role: 'Diretor de Métodos Educativos Adjunto',
+				imgURL: '~/assets/images/adultos/gustav.jpg',
+			},
+			{
+				name: 'Dorival',
+				role: 'Diretor de Relções Institucionais',
+				imgURL: '~/assets/images/adultos/dorival.jpg',
+			},
 			{ name: 'Atenante', role: 'Diretor de Relações Institucionais Adjunto' },
 			// { name: 'Ricardo', role: 'Diretor de Comunicação' },
 		],
@@ -21,7 +37,11 @@ const adultos = [
 	{
 		title: 'Alcateia',
 		voluntarios: [
-			{ name: 'Tatiana', role: 'Akelá' },
+			{
+				name: 'Tatiana',
+				role: 'Akelá',
+				imgURL: '~/assets/images/adultos/tatiana.jpg',
+			},
 			{ name: 'Luís Fernando', role: 'Baloo' },
 			// { name: 'Bernardo', role: 'Hathi' },
 			// { name: 'Lukas', role: 'Lobo Gris' },
@@ -33,21 +53,40 @@ const adultos = [
 		voluntarios: [
 			{ name: 'Karina', role: 'Chefe de Tropa' },
 			// { name: 'Daniel', role: 'Assistente da Tropa' },
-			{ name: 'Maria Eduarda', role: 'Assistente da Tropa' },
-			{ name: 'Brenda', role: 'Assistente da Tropa' },
-			{ name: 'Paulo', role: 'Assistente da Tropa' },
-			{ name: 'Vitor', role: 'Assistente da Tropa' },
+			{
+				name: 'Maria Eduarda',
+				role: 'Assistente da Tropa',
+				imgURL: '~/assets/images/adultos/maria-eduarda.jpg',
+			},
+			{
+				name: 'Brenda',
+				role: 'Assistente da Tropa',
+				imgURL: '~/assets/images/adultos/brenda.jpg',
+			},
+			{
+				name: 'Paulo',
+				role: 'Assistente da Tropa',
+				imgURL: '~/assets/images/adultos/paulo.jpg',
+			},
+			{
+				name: 'Vitor',
+				role: 'Assistente da Tropa',
+				imgURL: '~/assets/images/adultos/vitor.jpg',
+			},
 			// { name: 'Felipe', role: 'Assistente da Tropa' },
-			{ name: 'Vitória', role: 'Assistente da Tropa' },
+			// { name: 'Vitória', role: 'Assistente da Tropa' },
 		],
 	},
 	{
 		title: 'Tropa Sênior',
 		voluntarios: [
-			{ name: 'Leonardo', role: 'Chefe de Tropa' },
+			{
+				name: 'Flávio',
+				role: 'Chefe de Tropa',
+				imgURL: '~/assets/images/adultos/flavio.jpg',
+			},
 			{ name: 'Nara', role: 'Assistente da Tropa' },
 			{ name: 'Rigoberto', role: 'Assistente da Tropa' },
-			{ name: 'Flávio', role: 'Assistente da Tropa' },
 		],
 	},
 	{
@@ -74,17 +113,8 @@ const adultos = [
 				<>
 					<h2 class="mt-12 mb-8 text-2xl font-bold tracking-tight">{title}</h2>
 					<ul class="grid grid-cols-4 gap-8">
-						{voluntarios.map(({ name, role }) => (
-							<li class="flex-nowsrap col-span-2 flex flex-col md:col-span-1">
-								<span class="mb-4 block w-full rounded-md bg-slate-400 shadow-lg">
-									<Icon
-										name="tabler:user"
-										class="mx-auto my-5 aspect-square w-full"
-									/>
-								</span>
-								<span class="font-semibold">{name}</span>
-								<span class="text-sm">{role}</span>
-							</li>
+						{voluntarios.map(({ name, role, imgURL }) => (
+							<VolunteerCard name={name} role={role} imgURL={imgURL} />
 						))}
 					</ul>
 				</>

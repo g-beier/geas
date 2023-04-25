@@ -1,0 +1,29 @@
+---
+import { Picture } from '@astrojs/image/components';
+import { Icon } from 'astro-icon';
+import { findImage } from '~/utils/images';
+const { name, role, imgURL } = Astro.props;
+const image = await findImage(imgURL);
+---
+
+<li class="flex-nowsrap col-span-2 flex flex-col md:col-span-1">
+	{
+		imgURL ? (
+			<Picture
+				src={image}
+				alt={`${name}, ${role} no GEAS`}
+				widths={[400, 900]}
+				sizes="(max-width: 900px) 400px, 900px"
+				aspectRatio={3 / 4}
+				class="mb-4 w-full rounded-md shadow-lg"
+			/>
+		) : (
+			<div class="mb-4 grid aspect-[3/4] w-full place-items-center rounded-md bg-slate-400 shadow-lg	">
+				<Icon name="tabler:user" class="aspect-square w-full" />
+			</div>
+		)
+	}
+
+	<span class="font-semibold">{name}</span>
+	<span class="text-sm">{role}</span>
+</li>
