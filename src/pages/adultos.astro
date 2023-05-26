@@ -5,10 +5,18 @@ const { meta } = Astro.props;
 const adultos = [
 	{
 		title: 'Diretoria',
+		description:
+			'Adultos responsáveis pela administração e pelo bom funcionamento do grupo',
 		voluntarios: [
 			{ name: 'Antonio', role: 'Diretor Presidente' },
+			{ name: 'Leonardo', role: 'Diretor Vice-Presidente' },
 			{ name: 'Etiane', role: 'Diretora Administrativa' },
-			// { name: 'Cristina', role: 'Diretora Administrativa Adjunta' },
+			{
+				name: 'Daniel',
+				role: 'Diretor Administrativo Adjunto',
+				imgURL: '~/assets/images/adultos/daniel.jpg',
+			},
+			{ name: 'Elsa', role: 'Diretora Administrativa Adjunta' },
 			{
 				name: 'Marineris',
 				role: 'Diretora Financeira',
@@ -22,7 +30,7 @@ const adultos = [
 			},
 			{
 				name: 'Gustav',
-				role: 'Diretor de Métodos Educativos Adjunto',
+				role: 'Diretor Adjunto de Métodos Educativos ',
 				imgURL: '~/assets/images/adultos/gustav.jpg',
 			},
 			{
@@ -30,12 +38,13 @@ const adultos = [
 				role: 'Diretor de Relções Institucionais',
 				imgURL: '~/assets/images/adultos/dorival.jpg',
 			},
-			{ name: 'Atenante', role: 'Diretor de Relações Institucionais Adjunto' },
-			// { name: 'Ricardo', role: 'Diretor de Comunicação' },
+			{ name: 'Atenante', role: 'Diretor Adjunto de Relações Institucionais' },
 		],
 	},
 	{
 		title: 'Alcateia',
+		description:
+			'Voluntários que realizam atividades com os lobinhos - crianças de 6,5 a 10 anos.',
 		voluntarios: [
 			{
 				name: 'Tatiana',
@@ -43,16 +52,16 @@ const adultos = [
 				imgURL: '~/assets/images/adultos/tatiana.jpg',
 			},
 			{ name: 'Luís Fernando', role: 'Baloo' },
-			// { name: 'Bernardo', role: 'Hathi' },
-			// { name: 'Lukas', role: 'Lobo Gris' },
-			{ name: 'Juliana', role: 'Assistente da Alcateia' },
+			{ name: 'Juliana', role: 'Bagheera' },
+			{ name: 'Patrícia', role: 'Assistente da Alcateia' },
 		],
 	},
 	{
 		title: 'Tropa Escoteira',
+		description:
+			'Adultos que realizam atividades com os escoteiros - crianças e adolescentes entre 10 e 14 anos.',
 		voluntarios: [
 			{ name: 'Karina', role: 'Chefe de Tropa' },
-			// { name: 'Daniel', role: 'Assistente da Tropa' },
 			{
 				name: 'Maria Eduarda',
 				role: 'Assistente da Tropa',
@@ -70,15 +79,15 @@ const adultos = [
 			},
 			{
 				name: 'Vitor',
-				role: 'Assistente da Tropa',
+				role: 'Instrutor da Tropa',
 				imgURL: '~/assets/images/adultos/vitor.jpg',
 			},
-			// { name: 'Felipe', role: 'Assistente da Tropa' },
-			// { name: 'Vitória', role: 'Assistente da Tropa' },
 		],
 	},
 	{
 		title: 'Tropa Sênior',
+		description:
+			'Adultos que realizam atividades com adolescentes de 14 a 17 anos, chamados sêniores e guias.',
 		voluntarios: [
 			{
 				name: 'Flávio',
@@ -91,10 +100,9 @@ const adultos = [
 	},
 	{
 		title: 'Clã Pioneiro',
-		voluntarios: [
-			// { name: 'Patrícia', role: 'Mestre Pioneiro' },
-			{ name: 'Felipe', role: 'Mestre Pioneiro' },
-		],
+		description:
+			'Seção que reúne os jovens de 17 a 20 anos, chamados pioneiros.',
+		voluntarios: [{ name: 'Felipe', role: 'Mestre Pioneiro' }],
 	},
 ];
 ---
@@ -109,10 +117,11 @@ const adultos = [
 			</h1>
 		</header>
 		{
-			adultos.map(({ title, voluntarios }) => (
+			adultos.map(({ title, description, voluntarios }) => (
 				<>
-					<h2 class="mt-12 mb-8 text-2xl font-bold tracking-tight">{title}</h2>
-					<ul class="grid grid-cols-4 gap-8">
+					<h2 class="mt-12 text-2xl font-bold tracking-tight">{title}</h2>
+					{description && <p class="">{description}</p>}
+					<ul class="mt-8 grid grid-cols-4 gap-8">
 						{voluntarios.map(({ name, role, imgURL }) => (
 							<VolunteerCard name={name} role={role} imgURL={imgURL} />
 						))}
