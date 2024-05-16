@@ -6,23 +6,24 @@ const adultos = [
 	{
 		title: 'Diretoria',
 		description:
-			'Adultos responsáveis pela administração e pelo bom funcionamento do grupo',
+			'Adultos responsáveis pela administração e pelo bom funcionamento do grupo.',
 		voluntarios: [
-			{ name: 'Antonio', role: 'Diretor Presidente' },
-			{ name: 'Leonardo', role: 'Diretor Vice-Presidente' },
-			{ name: 'Etiane', role: 'Diretora Administrativa' },
+			{ name: 'Etiane', role: 'Diretora Presidente' },
 			{
-				name: 'Daniel',
-				role: 'Diretor Administrativo Adjunto',
-				imgURL: '~/assets/images/adultos/daniel.jpg',
+				name: 'Tatiana',
+				role: 'Diretora Vice-Presidente',
+				imgURL: '~/assets/images/adultos/tatiana.jpg',
 			},
-			{ name: 'Elsa', role: 'Diretora Administrativa Adjunta' },
+			{ name: 'Gênesis', role: 'Diretor Administrativo' },
 			{
-				name: 'Marineris',
-				role: 'Diretora Financeira',
-				imgURL: '~/assets/images/adultos/marineris.jpg',
+				name: 'Amarilda',
+				role: 'Diretora Administrativa Adjunta',
 			},
-			{ name: 'Aline', role: 'Diretora Financeira Adjunta' },
+			{
+				name: 'Ricardo',
+				role: 'Diretor Financeiro',
+			},
+			{ name: 'Márcia', role: 'Diretora Financeira Adjunta' },
 			{
 				name: 'Gilberto',
 				role: 'Diretor de Métodos Educativos',
@@ -39,6 +40,8 @@ const adultos = [
 				imgURL: '~/assets/images/adultos/dorival.jpg',
 			},
 			{ name: 'Atenante', role: 'Diretor Adjunto de Relações Institucionais' },
+			{ name: 'Felipe', role: 'Diretor de Comunicação' },
+			{ name: 'Luiza', role: 'Diretora Adjunta de Comunicação' },
 		],
 	},
 	{
@@ -47,13 +50,12 @@ const adultos = [
 			'Voluntários que realizam atividades com os lobinhos - crianças de 6,5 a 10 anos.',
 		voluntarios: [
 			{
-				name: 'Tatiana',
+				name: 'Naan',
 				role: 'Akelá',
-				imgURL: '~/assets/images/adultos/tatiana.jpg',
 			},
-			{ name: 'Luís Fernando', role: 'Baloo' },
-			{ name: 'Juliana', role: 'Bagheera' },
-			{ name: 'Patrícia', role: 'Assistente da Alcateia' },
+			{ name: 'Marcus', role: 'Assistente da Alcateia' },
+			{ name: 'Nicole', role: 'Assistente da Alcateia' },
+			{ name: 'Patrícia', role: 'Raksha' },
 		],
 	},
 	{
@@ -61,21 +63,14 @@ const adultos = [
 		description:
 			'Adultos que realizam atividades com os escoteiros - crianças e adolescentes entre 10 e 14 anos.',
 		voluntarios: [
-			{ name: 'Karina', role: 'Chefe de Tropa' },
-			{
-				name: 'Maria Eduarda',
-				role: 'Assistente da Tropa',
-				imgURL: '~/assets/images/adultos/maria-eduarda.jpg',
-			},
 			{
 				name: 'Brenda',
-				role: 'Assistente da Tropa',
+				role: 'Chefe de Tropa',
 				imgURL: '~/assets/images/adultos/brenda.jpg',
 			},
 			{
-				name: 'Paulo',
+				name: 'Victória',
 				role: 'Assistente da Tropa',
-				imgURL: '~/assets/images/adultos/paulo.jpg',
 			},
 			{
 				name: 'Vitor',
@@ -94,7 +89,11 @@ const adultos = [
 				role: 'Chefe de Tropa',
 				imgURL: '~/assets/images/adultos/flavio.jpg',
 			},
-			{ name: 'Nara', role: 'Assistente da Tropa' },
+			{
+				name: 'Maria Eduarda',
+				role: 'Assistente da Tropa',
+				imgURL: '~/assets/images/adultos/maria-eduarda.jpg',
+			},
 			{ name: 'Rigoberto', role: 'Assistente da Tropa' },
 		],
 	},
@@ -102,7 +101,10 @@ const adultos = [
 		title: 'Clã Pioneiro',
 		description:
 			'Seção que reúne os jovens de 17 a 20 anos, chamados pioneiros.',
-		voluntarios: [{ name: 'Felipe', role: 'Mestre Pioneiro' }],
+		voluntarios: [
+			{ name: 'Leonardo', role: 'Mestre Pioneiro' },
+			{ name: 'Aline', role: 'Assistente do Clã' },
+		],
 	},
 ];
 ---
@@ -111,10 +113,14 @@ const adultos = [
 	<section class="mx-auto max-w-3xl px-6 py-12 sm:px-6 sm:py-16 lg:py-20">
 		<header>
 			<h1
-				class="leading-tighter font-heading mb-8 text-center text-3xl font-bold tracking-tighter md:mb-12 md:text-4xl"
+				class="leading-tighter font-heading text-center text-3xl font-bold tracking-tighter md:text-4xl"
 			>
 				Adultos Voluntários
 			</h1>
+			<p class="mb-8 text-center tracking-tight sm:mx-8 md:mb-12">
+				Estes são os adultos voluntários que trabalham constantemente para
+				garantir o funcionamento do G.E. Albert Schweitzer.
+			</p>
 		</header>
 		{
 			adultos.map(({ title, description, voluntarios }) => (

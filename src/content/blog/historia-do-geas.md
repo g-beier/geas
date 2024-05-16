@@ -1,7 +1,7 @@
 ---
 publishDate: 'Oct 30 2011'
 title: 'História do GEAS'
-description: 'Texto resgatado do antigo site do GEAS, relatando parte da história do Grupo, até meados de 2012.'
+description: 'Relato da história do Grupo.'
 # excerpt: Descriçao que aparece na lista, opcional
 image: '~/assets/images/historia-geas.webp'
 category: 'Artigo'

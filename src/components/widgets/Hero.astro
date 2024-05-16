@@ -23,13 +23,14 @@ import { Picture } from '@astrojs/image/components';
 						class="m-auto flex max-w-xs flex-col flex-nowrap gap-4 sm:max-w-md sm:flex-row sm:justify-center"
 					>
 						<div class="flex w-full sm:w-auto">
-							<a
+							<!-- <a
 								class="btn btn-primary w-full sm:mb-0"
 								href="https://goo.gl/maps/317AMCrEq1Lso7By6"
 								target="_blank"
 								rel="noreferrer noopner"
-							>
-								<Icon name="tabler:map-pin" class="w-5 h-5 mr-1 -ml-1.5" /> Encontre
+							> -->
+							<a class="btn btn-primary w-full sm:mb-0" href="#mapa">
+								<Icon name="tabler:map-pin" class="-ml-1.5 mr-1 h-5 w-5" /> Encontre
 								o Albert
 							</a>
 						</div>
@@ -43,7 +44,7 @@ import { Picture } from '@astrojs/image/components';
 				<div class="relative m-auto max-w-4xl">
 					<Picture
 						src={import('~/assets/images/foto-epud-002.jpg')}
-						class="mx-auto rounded-md w-full"
+						class="mx-auto w-full rounded-md"
 						widths={[400, 768, 1480]}
 						sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
 						alt="Escoteiro sorrindo e fazendo uma saudação"

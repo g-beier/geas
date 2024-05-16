@@ -1,0 +1,109 @@
+---
+import { Picture } from '@astrojs/image/components';
+import { findImage } from '~/utils/images';
+
+type Testimonial = {
+	title?: String;
+	testimonial: String;
+	name?: String;
+	job?: String;
+	image?: String;
+};
+
+const testimonials: Testimonial[] = [
+	{
+		testimonial:
+			'O movimento escoteiro foi muito importante para a vida dos meus filhos, e para a minha também. Acompanhei o Dudu por quatro anos, e continuei auxiliando o GEAS mesmo depois que ele se afastou.',
+		name: 'Marineris',
+		job: 'Mãe e dirigente',
+		image: '~/assets/images/adultos/marineris.jpg',
+	},
+	{
+		testimonial:
+			'O movimento escoteiro foi muito importante para a vida dos meus filhos, e para a minha também. Acompanhei o Dudu por quatro anos, e continuei auxiliando o GEAS mesmo depois que ele se afastou.',
+		name: 'Ernani',
+		job: 'Presidente de honra',
+	},
+	{
+		testimonial:
+			'O movimento escoteiro foi muito importante para a vida dos meus filhos, e para a minha também. Acompanhei o Dudu por quatro anos, e continuei auxiliando o GEAS mesmo depois que ele se afastou.',
+		name: 'Karina',
+		job: 'Guia, pioneira e escotista',
+	},
+];
+---
+
+<section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+	<div class="mb-6 flex flex-col md:mb-8 lg:flex-row lg:justify-between">
+		<h2
+			class="font-heading group mb-2 max-w-lg text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none lg:mb-5"
+		>
+			Depoimentos
+		</h2>
+
+		<p class="text-gray-700 dark:text-slate-400 lg:max-w-md lg:text-sm">
+			Leia o testemunho de pessoas que passaram pelo Albert e o que elas
+			sentiram fazendo parte do GEAS.
+		</p>
+	</div>
+	<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+		{
+			testimonials &&
+				testimonials.map(
+					async ({ title = '', testimonial, name, job, image }) => {
+						const img = await findImage(image);
+						return (
+							<div class="flex h-auto">
+								<div class="relative flex flex-col rounded-md p-4 shadow-xl dark:border dark:border-slate-600 dark:shadow-none md:p-6">
+									{title && (
+										<h2 class="pb-4 text-lg font-medium leading-6">{title}</h2>
+									)}
+									{testimonial && (
+										<blockquote class="flex-auto">
+											<p class="text-sm text-gray-700 dark:text-slate-400">
+												{testimonial}
+											</p>
+										</blockquote>
+									)}
+
+									<hr class="my-4 border-slate-200 dark:border-slate-600" />
+
+									<div class="flex items-center">
+										{image && (
+											<div class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-600">
+												<Picture
+													src={img}
+													alt={`Depoimento de ${name}`}
+													widths={[400, 900]}
+													sizes="(max-width: 900px) 400px, 900px"
+													aspectRatio={1 / 1}
+													class="h-10 min-h-full w-10 min-w-full rounded-full border border-slate-200 dark:border-slate-600"
+												/>
+											</div>
+										)}
+
+										<div class="ml-3 grow">
+											{name && (
+												<p class="text-base font-semibold text-gray-900 dark:text-slate-200">
+													{name}
+												</p>
+											)}
+											{job && (
+												<p class="text-xs text-gray-700 dark:text-slate-400">
+													{job}
+												</p>
+											)}
+										</div>
+									</div>
+								</div>
+							</div>
+						);
+					}
+				)
+		}
+	</div>
+</section>
+
+<!-- <div class="mx-auto mt-8 flex w-fit justify-center font-medium md:mt-12">
+	<Button />
+</div> -->

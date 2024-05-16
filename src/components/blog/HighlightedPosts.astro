@@ -3,7 +3,12 @@ import Grid from '~/components/blog/Grid.astro';
 
 import { findPostsByIds } from '~/utils/posts';
 
-const ids = ['historia-do-geas', 'de-volta-a-nossa-natureza'];
+const ids = [
+	'enchentes-2024',
+	'de-volta-a-nossa-natureza',
+	'historia-do-geas',
+	'albert-schweitzer',
+];
 const posts = await findPostsByIds(ids);
 ---
 
