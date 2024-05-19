@@ -1,0 +1,112 @@
+---
+import { Picture } from '@astrojs/image/components';
+import { Icon } from 'astro-icon';
+import { findImage } from '~/utils/images';
+
+const {
+	title = await Astro.slots.render('title'),
+	subtitle = await Astro.slots.render('subtitle'),
+	tagline,
+	content = await Astro.slots.render('content'),
+
+	items = [],
+	image = await Astro.slots.render('image'),
+	isReversed = false,
+	isAfterContent = false,
+
+	classes = {},
+} = Astro.props;
+
+const img = await findImage(image);
+---
+
+<div
+	class={`max-w-7xl mx-auto ${isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''} ${
+		classes?.container ?? ''
+	}`}
+>
+	{
+		(title || subtitle || tagline) && (
+			<div class="mb-8 text-center md:mx-auto md:mb-12">
+				{tagline && (
+					<p
+						class="text-secondary text-base font-bold uppercase tracking-wide dark:text-blue-200"
+						set:html={tagline}
+					/>
+				)}
+				{title && (
+					<h2
+						class="leading-tighter font-heading text-heading text-3xl font-bold tracking-tighter"
+						set:html={title}
+					/>
+				)}
+
+				{subtitle && <p class="text-muted mt-4" set:html={subtitle} />}
+			</div>
+		)
+	}
+	<div class="mx-auto max-w-7xl p-4 md:px-8">
+		<div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
+			<div class="self-center md:basis-1/2">
+				{
+					content && (
+						<div class="mb-12 text-lg dark:text-slate-400" set:html={content} />
+					)
+				}
+
+				{
+					items && (
+						<div class="mx-auto grid gap-8 gap-y-4 sm:grid-cols-2 md:gap-y-8">
+							{items.map(({ title, description, icon }) => (
+								<div>
+									<div class="flex max-w-none flex-row">
+										<div class="flex justify-center">
+											{icon && (
+												<Icon
+													name={icon || 'tabler:check'}
+													class="mr-2 flex h-7 w-7 items-center justify-center rounded-full bg-green-600 p-1 text-gray-50 rtl:ml-2 rtl:mr-0 dark:bg-green-700"
+												/>
+											)}
+										</div>
+										<div class="mt-0.5">
+											{title && (
+												<h3 class="ml-2 text-lg font-medium leading-6 rtl:ml-0 rtl:mr-2 dark:text-white">
+													{title}
+												</h3>
+											)}
+											{description && (
+												<p
+													class={`${
+														title ? 'mt-3' : ''
+													} text-muted ml-2 rtl:ml-0 rtl:mr-2 dark:text-slate-400`}
+													set:html={description}
+												/>
+											)}
+										</div>
+									</div>
+								</div>
+							))}
+						</div>
+					)
+				}
+			</div>
+			<div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
+				{
+					image && (
+						<div class="relative m-auto max-w-4xl">
+							<Picture
+								src={img}
+								alt=""
+								class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
+								width={500}
+								height={500}
+								widths={[400, 768]}
+								sizes="(max-width: 768px) 100vw, 432px"
+							/>
+						</div>
+					)
+				}
+			</div>
+		</div>
+	</div>
+</div>

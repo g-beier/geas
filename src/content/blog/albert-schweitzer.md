@@ -2,7 +2,7 @@
 publishDate: 'Apr 18 2023'
 title: 'O Albert Schweitzer'
 description: 'Um resgate histórico aprofundado da história de Albert Schweitzer, teólogo, filósofo, organista e médico missionário que é patrono de nosso Grupo Escoteiro.'
-image: '~/assets/images/albert-schweitzer.jpeg'
+image: '~/assets/images/blog/albert-schweitzer.jpeg'
 excerpt: 'Conheça a biografia de Albert Schweitzer, teólogo e médico que dá o nome ao nosso Grupo Escoteiro.'
 category: 'Artigo'
 tags: [história, voluntariado]

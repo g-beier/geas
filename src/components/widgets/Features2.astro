@@ -3,40 +3,47 @@ import { Icon } from 'astro-icon';
 
 const items = [
 	{
-		title: 'Headers',
+		title: 'A Promessa e a Lei&nbsp;Escoteira',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-		icon: 'flat-color-icons:home',
+			'Um compromisso voluntário com um conjunto de valores compartilhado.',
+		icon: 'flat-color-icons:biotech',
 	},
 	{
-		title: 'Footers',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-		icon: 'flat-color-icons:faq',
+		title: 'Aprender Fazendo',
+		description: 'Uma abordagem experiencial da educação.',
+		icon: 'flat-color-icons:positive-dynamic',
 	},
 	{
-		title: 'Features',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-		icon: 'flat-color-icons:video-projector',
+		title: 'Progressão Pessoal',
+		description: 'Motivação e desafio para o desenvolvimento contínuo.',
+		icon: 'flat-color-icons:reading',
 	},
 	{
-		title: 'Call-to-Action',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-		icon: 'flat-color-icons:video-projector',
+		title: 'Sistema de Equipes',
+		description: 'Uma ferramenta de empoderamento dos jovens.',
+		icon: 'flat-color-icons:conference-call',
 	},
 	{
-		title: 'Pricing',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-		icon: 'flat-color-icons:calculator',
+		title: 'Suporte do Adulto',
+		description: 'Parceria entre jovens e adultos.',
+		icon: 'flat-color-icons:collaboration',
 	},
 	{
-		title: 'Testimonial',
+		title: 'Marco Simbólico',
+		description: 'Um conjunto de símbolos, temas e histórias.',
+		icon: 'flat-color-icons:panorama',
+	},
+	{
+		title: 'Natureza',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-		icon: 'flat-color-icons:voice-presentation',
+			'Um cenário ideal que proporciona diversas oportunidades de aprendizagem.',
+		icon: 'flat-color-icons:landscape',
+	},
+	{
+		title: 'Envolvimento Comunitário',
+		description:
+			'Empoderando os jovens para que sejam cidadãs e cidadãos globais ativos.',
+		icon: 'flat-color-icons:globe',
 	},
 ];
 ---
@@ -53,18 +60,20 @@ const items = [
 				<p
 					class="text-base font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-200"
 				>
-					Components
+					Os oito elementos do
 				</p>
 				<h2
 					class="leading-tighter font-heading mb-4 text-4xl font-bold tracking-tighter md:text-5xl"
 				>
-					Most used widgets
+					Método Educativo Escoteiro
 				</h2>
 				<p
-					class="mx-auto max-w-3xl text-center text-xl text-gray-600 dark:text-slate-400"
+					class="mx-auto max-w-3xl text-center text-lg text-gray-600 dark:text-slate-400"
 				>
-					Provides frequently used components for building websites using
-					Tailwind CSS
+					Estes elementos podem ser encontrados isoladamente em outras propostas
+					educativas.
+					<br />
+					A originalidade está em integrá-los em um todo.
 				</p>
 			</div>
 			<div
@@ -76,7 +85,7 @@ const items = [
 							<div class="mb-4 flex items-center">
 								<Icon name={icon} class="h-12 w-12" />
 
-								<div class="ml-4 text-xl font-bold">{title}</div>
+								<div class="ml-4 text-xl font-bold" set:html={title} />
 							</div>
 							<p class="text-md text-gray-500 dark:text-gray-400">
 								{description}
@@ -84,6 +93,17 @@ const items = [
 						</div>
 					))
 				}
+				<div
+					class="col-span-2 overflow-clip rounded shadow-xl lg:col-span-1 lg:col-start-2 lg:row-start-2"
+				>
+					<iframe
+						class="aspect-video w-full"
+						src="https://www.youtube-nocookie.com/embed/B7FmNmH0uhE?si=Tgt2hGuHB1eT2uit&controls=0"
+						title="Conheça o Médoto Educativo Escoteiro - YouTube"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen></iframe>
+				</div>
 			</div>
 		</div>
 	</div>

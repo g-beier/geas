@@ -2,7 +2,7 @@
 publishDate: 'Dec 12 2022'
 title: 'De volta à nossa Natureza'
 description: 'O cenário atual do Movimento Escoteiro pós pandemia no Rio Grande do Sul e a busca por uma reconstrução de identidade. Material produzido por Felipe Zanini para a disciplina Reportagem e Entrevista, durante a faculdade de Jornalismo (PUCRS).'
-image: '~/assets/images/foto-epud-004.jpg'
+image: '~/assets/images/blog/foto-epud-004.jpg'
 excerpt: 'Material produzido por Felipe Zanini para a disciplina Reportagem e Entrevista, durante a faculdade de Jornalismo (PUCRS).'
 category: 'Artigo'
 tags: [escotismo, pandemia, voluntariado]

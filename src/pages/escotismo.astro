@@ -1,0 +1,26 @@
+---
+// import { Picture } from '@astrojs/image/components';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const { meta } = Astro.props;
+---
+
+<Layout meta={meta}>
+	<Features3 />
+	<Features2 />
+	<!-- <div class="m-auto max-w-6xl overflow-hidden px-4 sm:px-6">
+		<Picture
+			src={import('~/assets/images/foto-epud-005.jpg')}
+			class="mx-auto w-full rounded-md"
+			widths={[400, 768, 1480]}
+			sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
+			alt="Escoteiro sorrindo e fazendo uma saudação"
+			aspectRatio={1480 / 833}
+			loading="eager"
+			width={1480}
+			height={833}
+		/>
+	</div> -->
+</Layout>
